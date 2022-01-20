@@ -1,3 +1,14 @@
+# 我的内容
+tmp
+
+## 数据
+data
+hdf5
+
+## 插件生成
+.history
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

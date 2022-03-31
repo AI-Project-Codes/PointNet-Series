@@ -15,7 +15,9 @@ import unittest
 import torch
 from torch.autograd import Variable
 
-from model.pointnet_utils import PointNetEncoder, STNkd, feature_transform_regularize
+from model.pointnet_utils import feature_transform_regularize
+from model.pointnet_encoder import PointNetEncoder
+from model.stnkd import STNkd
 from tools import log_title, log_subtitle, log_info, log_debug
 import logging
 

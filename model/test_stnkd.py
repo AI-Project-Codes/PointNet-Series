@@ -1,9 +1,10 @@
+# -*- encoding: utf-8 -*-
 """
 =================================================
-@path   : PointNet-Series -> pointnet_utils.py
+@path   : PointNet-Series -> test_stnkd.py
 @IDE    : PyCharm
 @Author : zYx.Tom, 526614962@qq.com
-@Date   : 2022-01-20 11:02
+@Date   : 2022-02-10 10:20
 @Version: v0.1
 @License: (C)Copyright 2020-2022, zYx.Tom
 @Reference:
@@ -11,16 +12,6 @@
 ==================================================
 """
 from datetime import datetime
-import torch
-
-
-def feature_transform_regularize(trans):
-    #
-    d = trans.size()[1]
-    I = torch.eye(d)[None, :, :]
-    I = I.cuda() if trans.is_cuda else I
-    loss = torch.mean(torch.norm(torch.bmm(trans, trans.transpose(2, 1)) - I, dim=(1, 2)))
-    return loss
 
 
 def main(name):
